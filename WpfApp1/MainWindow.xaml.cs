@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace PracticeTestApp
 {
@@ -157,6 +159,17 @@ namespace PracticeTestApp
                 Margin = new Thickness(0, 30, 0, 0)
             };
             MainStackPanel.Children.Add(resultTextBlock);
+            // Добавления изображения
+            Image resultImage = new Image
+            {
+                Source = new BitmapImage(new Uri("https://sun9-20.userapi.com/impg/4oAZ1rUSjuJw1Cxpw01p5bYwGBclYa7BdCPUzQ/vZTpVC1cyxU.jpg?size=450x442&quality=95&sign=3839d7533f822cddc3477fc05f175323&type=album")),
+                Width = 300,
+                Height = 300,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                Margin = new Thickness(0, 20, 0, 0)
+            };
+            MainStackPanel.Children.Add(resultImage);
         }
     }
 
